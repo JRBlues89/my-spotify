@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Clon de Spotify 🤣</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- FASE 7B: Barras de ecualizador -->
+  <div class="ecualizador" id="ecualizador">
+    <div class="barra-eq"></div>
+    <div class="barra-eq"></div>
+    <div class="barra-eq"></div>
+    <div class="barra-eq"></div>
+    <div class="barra-eq"></div>
+  </div>
+
+  <div class="app">
+
+    <!-- PANEL IZQUIERDO -->
+    <aside class="panel-izquierdo">
+
+      <!-- FASE 7A: Botón modo oscuro -->
+      <button class="btn-tema" id="btnTema" title="Cambiar tema">☀️</button>
+
+
+      <div class="portada-contenedor">
+        <!-- FASE 7B: La imagen gira como un vinilo -->
+        <img
+          id="portadaImg"
+          class="portada-imagen"
+          src="https://picsum.photos/seed/album1/300/300"
+          alt="Portada del álbum"
+        />
+        <div class="aguja"></div>
+      </div>
+
+      <div class="album-info">
+        <h1 class="album-nombre" id="albumNombre">Mi Playlist</h1>
+        <p class="album-artista" id="albumArtista">Varios Artistas</p>
+      </div>
+
+      <!-- FASE 7C: Contador de tiempo total escuchado -->
+      <div class="tiempo-total-contenedor">
+        <span class="tiempo-total-label">⏱ Tiempo escuchado</span>
+        <span class="tiempo-total-valor" id="tiempoTotal">00:00:00</span>
+      </div>
+
+      <!-- FASE 2 EXTRA: Campo de búsqueda -->
+      <div class="busqueda-contenedor">
+        <input
+          type="text"
+          id="campoBusqueda"
+          class="campo-busqueda"
+          placeholder="🔍 Buscar canción..."
+        />
+      </div>
+
+    </aside>
+
+    <!-- PANEL DERECHO -->
+    <main class="panel-derecho">
+
+      <header class="header-lista">
+        <span class="col-num">#</span>
+        <span class="col-titulo">TÍTULO</span>
+        <span class="col-duracion">⏱</span>
+      </header>
+
+      <!-- FASE 2: La lista se genera desde JavaScript -->
+      <ul class="lista-canciones" id="listaCanciones"></ul>
+
+      <!-- FASE 5: Controles de reproducción -->
+      <div class="controles">
+
+        <!-- FASE 4: Barra de progreso -->
+        <div class="barra-progreso-contenedor" id="barraProgresoContenedor">
+          <span class="tiempo-actual" id="tiempoActual">0:00</span>
+          <div class="barra-carril" id="barraCarril">
+            <div class="barra-relleno" id="barraRelleno"></div>
+            <div class="barra-pulgar" id="barraPulgar"></div>
+          </div>
+          <span class="tiempo-duracion" id="tiempoDuracion">0:00</span>
+        </div>
+
+        <div class="botones-principales">
+          <!-- FASE 7 EXTRA: Botón shuffle -->
+          <button class="btn-control btn-shuffle" id="btnShuffle" title="Aleatorio">🔀</button>
+          <button class="btn-control" id="btnAnterior" title="Anterior">⏮</button>
+          <button class="btn-play" id="btnPlay">▶</button>
+          <button class="btn-control" id="btnSiguiente" title="Siguiente">⏭</button>
+          <!-- FASE 4 EXTRA: Control de volumen -->
+          <div class="volumen-contenedor">
+            <span class="volumen-icono">🔊</span>
+            <input type="range" id="sliderVolumen" min="0" max="1" step="0.01" value="1" class="slider-volumen"/>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
+  <!-- FASE 4: Elemento de audio (oculto, sin controles nativos) -->
+  <audio id="reproductor"></audio>
+
+  <script type="text/javascript">
+    alert("¡Mil diculpas por la espera profe!, Bienvenido a mi cloncito de Spotify 🤣, Presionar 🆗 para continuar");
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
